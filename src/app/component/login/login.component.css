@@ -6,3 +6,6 @@ ul {
     content: '✓ ';
     color: green;
   }
+button {
+  width: 100%;
+}

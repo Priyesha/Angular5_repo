@@ -10,7 +10,10 @@ import { UserServiceService} from '../../service/user-service.service';
 export class LoginComponent implements OnInit {
   user_name: string;
   password: string;
-  constructor(private userService: UserServiceService) { }
+  show_mobile_field: boolean = true;
+  show_email_field: boolean = false;
+
+    constructor(private userService: UserServiceService) { }
 
   ngOnInit() {
   }
@@ -22,5 +25,14 @@ export class LoginComponent implements OnInit {
           err => console.error(err),
           () => console.log('done')
         );
+      }
+
+      changeToEmail() {
+        this.show_mobile_field = false;
+        this.show_email_field = true;
+      }
+      changeToMobile() {
+        this.show_email_field = false;
+        this.show_mobile_field = true;
       }
 }
