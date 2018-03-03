@@ -1,0 +1,40 @@
+<form class="col s12 m8 l4">
+        <div class="row">
+          <h5 class="blue-text text-darken-1">Create Account</h5>
+          <p>We'll send a text verfication. Message and date rates may apply.</p>
+          </div>
+          <div class="row">
+              <div class="col s12 m8 l4">
+                  <span><b>Mobile number<sup>*</sup>(This will be your username)</b></span>
+                  <input [(ngModel)]="user_name" name="username" id="user_name" type="text" class="validate">
+                  <label for="user_name">000-000-0000 US only</label>
+              </div>
+              </div>
+              <div class="row">
+                  <div class="col s12 m8 l4">
+                      <span><b>Password</b></span>
+                      <input [(ngModel)]="password" name="password" id="password" type="password" class="validate">
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col s12 m8 l6 card-panel grey lighten-4"><b>Password requirements</b>
+                    <ul>
+                      <li class="grey-text text-lighten-1">At least 8 characters</li>
+                      <li class="grey-text text-lighten-1">Must include a number</li>
+                      <li class="grey-text text-lighten-1">Must include an uppercase letter</li>
+                      <li class="grey-text text-lighten-1">Must include a special character: @#$%^&*()+~./[]-</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="md-checkbox">
+                    <input id="checkbox" type="checkbox" checked>
+                    <label for="checkbox" class="black-text">Yes, I wish to receive information from Blue Cross Blue Shield of Massachusetts</label>
+                  </div>
+                  <p class="grey-text text-lighten-1">By Clicking "Continue", I agree to the Blue Cross Blue Shield of Massachusetts of Use and confidentiality</p>
+                  <div class="row">
+                    <div class="col s12 m8 l4">
+                        <button (click)="login()" class="btn blue darken-3">Continue</button>
+                    </div>
+                  </div>
+                  <p><sup>*</sup>Field is required</p>
+              </form>
